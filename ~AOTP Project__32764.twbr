@@ -1,0 +1,2305 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20181.18.0615.1128                               -->
+<workbook source-build='2018.1.2 (20181.18.0615.1128)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <SortTagCleanup />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
+      <aliases enabled='yes' />
+      <column caption='Top Diseases' datatype='integer' name='[Parameter 1]' param-domain-type='range' role='measure' type='quantitative' value='30'>
+        <calculation class='tableau' formula='30' />
+        <range granularity='5' max='30' min='5' />
+      </column>
+    </datasource>
+    <datasource caption='Pivoted Join (2) (Pivoted AOTP Join)' inline='true' name='federated.0htu0bv1fgj03y1h899z019l0bbb' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Pivoted AOTP Join' name='excel-direct.1tnlqc8052tacg17l9nbr1tp8oiq'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:/Users/chaas/Desktop/AOTP Documents/Pivoted AOTP Join.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <relation connection='excel-direct.1tnlqc8052tacg17l9nbr1tp8oiq' name='Pivoted Join (2)' table='[&apos;Pivoted Join (2)$&apos;]' type='table'>
+          <columns gridOrigin='A1:R10001:no:A1:R10001:0' header='yes' outcome='6'>
+            <column datatype='string' name='Event Name' ordinal='0' />
+            <column datatype='integer' name='Local' ordinal='1' />
+            <column datatype='real' name='Latitude' ordinal='2' />
+            <column datatype='integer' name='Pivot1 Values' ordinal='3' />
+            <column datatype='real' name='Longitude' ordinal='4' />
+            <column datatype='string' name='Date' ordinal='5' />
+            <column datatype='string' name='Month' ordinal='6' />
+            <column datatype='string' name='Key-1' ordinal='7' />
+            <column datatype='string' name='Class' ordinal='8' />
+            <column datatype='string' name='Order' ordinal='9' />
+            <column datatype='string' name='Affliction' ordinal='10' />
+            <column datatype='integer' name='Year' ordinal='11' />
+            <column datatype='string' name='Deaths and Cases' ordinal='12' />
+            <column datatype='integer' name='Battle Order' ordinal='13' />
+            <column datatype='integer' name='Day' ordinal='14' />
+            <column datatype='string' name='Key' ordinal='15' />
+            <column datatype='integer' name='Parasitic' ordinal='16' />
+            <column datatype='string' name='Location' ordinal='17' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>Event Name</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Event Name]</local-name>
+            <parent-name>[Pivoted Join (2)]</parent-name>
+            <remote-alias>Event Name</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Local</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Local]</local-name>
+            <parent-name>[Pivoted Join (2)]</parent-name>
+            <remote-alias>Local</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Latitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Latitude]</local-name>
+            <parent-name>[Pivoted Join (2)]</parent-name>
+            <remote-alias>Latitude</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Pivot1 Values</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Pivot1 Values]</local-name>
+            <parent-name>[Pivoted Join (2)]</parent-name>
+            <remote-alias>Pivot1 Values</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Longitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Longitude]</local-name>
+            <parent-name>[Pivoted Join (2)]</parent-name>
+            <remote-alias>Longitude</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Date</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Date]</local-name>
+            <parent-name>[Pivoted Join (2)]</parent-name>
+            <remote-alias>Date</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Month</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Month]</local-name>
+            <parent-name>[Pivoted Join (2)]</parent-name>
+            <remote-alias>Month</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Key-1</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Key-1]</local-name>
+            <parent-name>[Pivoted Join (2)]</parent-name>
+            <remote-alias>Key-1</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Class</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Class]</local-name>
+            <parent-name>[Pivoted Join (2)]</parent-name>
+            <remote-alias>Class</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Order</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Order]</local-name>
+            <parent-name>[Pivoted Join (2)]</parent-name>
+            <remote-alias>Order</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Affliction</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Affliction]</local-name>
+            <parent-name>[Pivoted Join (2)]</parent-name>
+            <remote-alias>Affliction</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Year]</local-name>
+            <parent-name>[Pivoted Join (2)]</parent-name>
+            <remote-alias>Year</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Deaths and Cases</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Deaths and Cases]</local-name>
+            <parent-name>[Pivoted Join (2)]</parent-name>
+            <remote-alias>Deaths and Cases</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Battle Order</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Battle Order]</local-name>
+            <parent-name>[Pivoted Join (2)]</parent-name>
+            <remote-alias>Battle Order</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Day</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Day]</local-name>
+            <parent-name>[Pivoted Join (2)]</parent-name>
+            <remote-alias>Day</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Key</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Key]</local-name>
+            <parent-name>[Pivoted Join (2)]</parent-name>
+            <remote-alias>Key</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Parasitic</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Parasitic]</local-name>
+            <parent-name>[Pivoted Join (2)]</parent-name>
+            <remote-alias>Parasitic</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Location</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Location]</local-name>
+            <parent-name>[Pivoted Join (2)]</parent-name>
+            <remote-alias>Location</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Pivoted Join (2)]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:R10001:no:A1:R10001:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Disease' datatype='string' name='[Affliction]' role='dimension' type='nominal' />
+      <column caption='Top Diseases vs. Other' datatype='string' name='[Calculation_2034501150461566976]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF  [Top Affliction by Number] THEN [Affliction]&#13;&#10;ELSE &quot;Other&quot;&#13;&#10;End' />
+      </column>
+      <column datatype='string' name='[Class]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='%null%' value='Unidentified' />
+        </aliases>
+      </column>
+      <column datatype='integer' name='[Day]' role='dimension' type='quantitative' />
+      <column datatype='string' name='[Deaths and Cases]' role='dimension' type='nominal' />
+      <column datatype='string' name='[Event Name]' role='dimension' type='nominal' />
+      <column caption='Month and Year' datatype='string' name='[Key]' role='dimension' type='nominal' />
+      <column aggregation='Avg' datatype='real' name='[Latitude]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+      <column datatype='integer' hidden='true' name='[Local]' role='measure' type='quantitative' />
+      <column aggregation='Avg' datatype='real' name='[Longitude]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column datatype='string' name='[Order]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='%null%' value='Unidentified' />
+        </aliases>
+      </column>
+      <column datatype='integer' hidden='true' name='[Parasitic]' role='measure' type='quantitative' />
+      <column caption='Number' datatype='integer' name='[Pivot1 Values]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Year]' role='dimension' type='quantitative' />
+      <column-instance column='[Calculation_2034501150461566976]' derivation='None' name='[none:Calculation_2034501150461566976:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Class]' derivation='None' name='[none:Class:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Deaths and Cases]' derivation='None' name='[none:Deaths and Cases:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Key]' derivation='None' name='[none:Key:nk]' pivot='key' type='nominal' />
+      <group caption='Action (Disease,Class,Deaths and Cases,Order)' hidden='true' name='[Action (Disease,Class,Deaths and Cases,Order)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[Affliction]' />
+          <groupfilter function='level-members' level='[Class]' />
+          <groupfilter function='level-members' level='[Deaths and Cases]' />
+          <groupfilter function='level-members' level='[Order]' />
+        </groupfilter>
+      </group>
+      <group caption='Action (Event Name)' hidden='true' name='[Action (Event Name)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[Event Name]' />
+        </groupfilter>
+      </group>
+      <group caption='Top Diseases by Number' name='[Top Affliction by Number]' name-style='unqualified' user:ui-builder='filter-group'>
+        <groupfilter count='[Parameters].[Parameter 1]' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+          <groupfilter direction='DESC' expression='SUM([Pivot1 Values])' function='order' user:ui-marker='order'>
+            <groupfilter function='level-members' level='[Affliction]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </groupfilter>
+        </groupfilter>
+      </group>
+      <drill-paths>
+        <drill-path name='Class, Order'>
+          <field>[Class]</field>
+          <field>[Order]</field>
+          <field>[Affliction]</field>
+        </drill-path>
+      </drill-paths>
+      <layout dim-ordering='alphabetic' dim-percentage='0.61825' group-percentage='0.0577281' measure-ordering='alphabetic' measure-percentage='0.264432' parameter-percentage='0.0595903' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Calculation_2034501150461566976:nk]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;Contusion&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Typhoid&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Abscess&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Diarrhea_acute&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Piles&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Other&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;Fever_remittent&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Fever_Malarial&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Diarrhea_cronic&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Catarrh&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Inflammation_tonsils&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Other_Miasmatic&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Boil&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Measles&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Rheumatism_acute&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Jaundice&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Colic&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Fever_tertian_intermittent&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Gonorrhea&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Other_Respiratory&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Dyspepsia&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Fever_quotidian_intermittent&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;Wound_gunshot&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Constipation&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Dysentery_acute&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Neuralgia&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Rheumatism_chronic&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Headache&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Epidemic_catarrh&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Bronchitis_acute&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Syphilis&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Deaths and Cases:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;1861 August Case&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;1861 December Case&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;1861 July Case&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;1861 November Case&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;1861 October Case&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;1861 September Cases&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;1862 April Case&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;1862 August Case&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;1862 December Case&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;1862 February Case&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;1862 January Case&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;1862 July Case&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;1862 June Case&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;1862 March Case&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;1862 May Case&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;1862 November Case&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;1862 October Case&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;1862 September Case&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;1863 April Case&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;1863 August Case&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;1863 December Case&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;1863 February Case&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;1863 January Case&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;1863 July Case&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;1863 June Case&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;1863 March Case&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;1863 May Case&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;1863 November Case&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;1863 October Case&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;1863 September Case&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;1864 April Case&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;1864 August Case&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;1864 December Case&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;1864 February Case&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;1864 January Case&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;1864 July Case&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;1864 June Case&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;1864 March Case&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;1864 May Case&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;1864 November Case&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;1864 October Case&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;1864 September Case&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;1865 April Case&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;1865 February case&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;1865 January Case&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;1865 March Case&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;FY1862 Total Cases&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;FY1863 Total Cases&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;FY1864 Total Cases&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;1861 August Death&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;1861 December death&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;1861 July Death&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;1861 November death&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;1861 October death&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;1861 September death&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;1862 April death&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;1862 August death&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;1862 December death&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;1862 February death&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;1862 January death&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;1862 July death&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;1862 June death&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;1862 March death&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;1862 May Death&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;1862 November death&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;1862 October death&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;1862 September death&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;1863 April death&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;1863 August death&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;1863 December death&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;1863 February death&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;1863 January death&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;1863 July death&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;1863 June death&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;1863 March death&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;1863 May death&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;1863 November death&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;1863 October death&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;1863 September death&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;1864 April death&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;1864 August Death&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;1864 December death&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;1864 February death&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;1864 January death&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;1864 July death&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;1864 June death&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;1864 March death&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;1864 May death&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;1864 November death&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;1864 October death&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;1864 September Death&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;1865 April death&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;1865 February death&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;1865 January death&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;1865 March death&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;FY1862 Total Deaths&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;FY1863 Total deaths&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;FY1864 Total Deaths&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Class:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>%null%</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Wounds, Accidents, Injuries&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;Parasitic&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Local&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;Zymotic&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Constitutional&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <default-sorts>
+        <manual-sort column='[none:Key:nk]' direction='ASC'>
+          <dictionary>
+            <bucket>&quot;July, 1861&quot;</bucket>
+            <bucket>&quot;August, 1861&quot;</bucket>
+            <bucket>&quot;September, 1861&quot;</bucket>
+            <bucket>&quot;October, 1861&quot;</bucket>
+            <bucket>&quot;November, 1861&quot;</bucket>
+            <bucket>&quot;December, 1861&quot;</bucket>
+            <bucket>&quot;January, 1862&quot;</bucket>
+            <bucket>&quot;February, 1862&quot;</bucket>
+            <bucket>&quot;March, 1862&quot;</bucket>
+            <bucket>&quot;April, 1862&quot;</bucket>
+            <bucket>&quot;May, 1862&quot;</bucket>
+            <bucket>&quot;June, 1862&quot;</bucket>
+            <bucket>&quot;July, 1862&quot;</bucket>
+            <bucket>&quot;August, 1862&quot;</bucket>
+            <bucket>&quot;September, 1862&quot;</bucket>
+            <bucket>&quot;October, 1862&quot;</bucket>
+            <bucket>&quot;November, 1862&quot;</bucket>
+            <bucket>&quot;December, 1862&quot;</bucket>
+            <bucket>&quot;January, 1863&quot;</bucket>
+            <bucket>&quot;February, 1863&quot;</bucket>
+            <bucket>&quot;March, 1863&quot;</bucket>
+            <bucket>&quot;April, 1863&quot;</bucket>
+            <bucket>&quot;May, 1863&quot;</bucket>
+            <bucket>&quot;June, 1863&quot;</bucket>
+            <bucket>&quot;July, 1863&quot;</bucket>
+            <bucket>&quot;August, 1863&quot;</bucket>
+            <bucket>&quot;September, 1863&quot;</bucket>
+            <bucket>&quot;October, 1863&quot;</bucket>
+            <bucket>&quot;November, 1863&quot;</bucket>
+            <bucket>&quot;December, 1863&quot;</bucket>
+            <bucket>&quot;January, 1864&quot;</bucket>
+            <bucket>&quot;February, 1864&quot;</bucket>
+            <bucket>&quot;March, 1864&quot;</bucket>
+            <bucket>&quot;April, 1864&quot;</bucket>
+            <bucket>&quot;May, 1864&quot;</bucket>
+            <bucket>&quot;June, 1864&quot;</bucket>
+            <bucket>&quot;July, 1864&quot;</bucket>
+            <bucket>&quot;August, 1864&quot;</bucket>
+            <bucket>&quot;September, 1864&quot;</bucket>
+            <bucket>&quot;October, 1864&quot;</bucket>
+            <bucket>&quot;November, 1864&quot;</bucket>
+            <bucket>&quot;December, 1864&quot;</bucket>
+            <bucket>&quot;January, 1865&quot;</bucket>
+            <bucket>&quot;February, 1865&quot;</bucket>
+            <bucket>&quot;March, 1865&quot;</bucket>
+            <bucket>&quot;April, 1865&quot;</bucket>
+            <bucket>&quot;FY1862&quot;</bucket>
+            <bucket>&quot;FY1863&quot;</bucket>
+            <bucket>&quot;FY1864&quot;</bucket>
+          </dictionary>
+        </manual-sort>
+      </default-sorts>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='Top Diseases' datatype='integer' name='[Parameter 1]' param-domain-type='range' role='measure' type='quantitative' value='30'>
+          <calculation class='tableau' formula='30' />
+          <range granularity='5' max='30' min='5' />
+        </column>
+      </datasource-dependencies>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <actions>
+    <action caption='Highlight 1 (generated)' name='[Action1]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Disease Dashboard' type='sheet' />
+      <command command='tsc:brush'>
+        <param name='field-captions' value='Deaths and Cases' />
+        <param name='target' value='Disease Dashboard' />
+      </command>
+    </action>
+    <action caption='Filter 1 (generated)' name='[Action2]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Class Dashboard' type='sheet' worksheet='Map' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Class Dashboard' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='Cases Class Pie Chart'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Cases by Class</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Pivoted Join (2) (Pivoted AOTP Join)' name='federated.0htu0bv1fgj03y1h899z019l0bbb' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0htu0bv1fgj03y1h899z019l0bbb'>
+            <column caption='Disease' datatype='string' name='[Affliction]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Class]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='%null%' value='Unidentified' />
+              </aliases>
+            </column>
+            <column datatype='string' name='[Deaths and Cases]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Event Name]' role='dimension' type='nominal' />
+            <column caption='Month and Year' datatype='string' name='[Key]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Order]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='%null%' value='Unidentified' />
+              </aliases>
+            </column>
+            <column caption='Number' datatype='integer' name='[Pivot1 Values]' role='measure' type='quantitative' />
+            <column-instance column='[Affliction]' derivation='None' name='[none:Affliction:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Class]' derivation='None' name='[none:Class:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Deaths and Cases]' derivation='None' name='[none:Deaths and Cases:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Key]' derivation='None' name='[none:Key:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Order]' derivation='None' name='[none:Order:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Pivot1 Values]' derivation='Sum' name='[sum:Pivot1 Values:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0htu0bv1fgj03y1h899z019l0bbb].[Action (Event Name)]'>
+            <groupfilter function='level-members' level='[Event Name]' user:ui-action-filter='[Action2]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0htu0bv1fgj03y1h899z019l0bbb].[none:Deaths and Cases:nk]'>
+            <groupfilter function='level-members' level='[none:Deaths and Cases:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0htu0bv1fgj03y1h899z019l0bbb].[none:Key:nk]' filter-group='3'>
+            <groupfilter function='member' level='[none:Key:nk]' member='&quot;November, 1864&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0htu0bv1fgj03y1h899z019l0bbb].[none:Deaths and Cases:nk]</column>
+            <column>[federated.0htu0bv1fgj03y1h899z019l0bbb].[none:Key:nk]</column>
+            <column>[federated.0htu0bv1fgj03y1h899z019l0bbb].[Action (Event Name)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <encodings>
+              <color column='[federated.0htu0bv1fgj03y1h899z019l0bbb].[none:Class:nk]' />
+              <lod column='[federated.0htu0bv1fgj03y1h899z019l0bbb].[none:Order:nk]' />
+              <lod column='[federated.0htu0bv1fgj03y1h899z019l0bbb].[none:Affliction:nk]' />
+              <wedge-size column='[federated.0htu0bv1fgj03y1h899z019l0bbb].[sum:Pivot1 Values:qk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+    </worksheet>
+    <worksheet name='Cases Pie Chart'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Cases</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Pivoted Join (2) (Pivoted AOTP Join)' name='federated.0htu0bv1fgj03y1h899z019l0bbb' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0htu0bv1fgj03y1h899z019l0bbb'>
+            <column caption='Disease' datatype='string' name='[Affliction]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Deaths and Cases]' role='dimension' type='nominal' />
+            <column caption='Month and Year' datatype='string' name='[Key]' role='dimension' type='nominal' />
+            <column caption='Number' datatype='integer' name='[Pivot1 Values]' role='measure' type='quantitative' />
+            <column-instance column='[Affliction]' derivation='None' name='[none:Affliction:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Deaths and Cases]' derivation='None' name='[none:Deaths and Cases:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Key]' derivation='None' name='[none:Key:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Pivot1 Values]' derivation='Sum' name='[sum:Pivot1 Values:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0htu0bv1fgj03y1h899z019l0bbb].[none:Deaths and Cases:nk]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1861 August Case&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1861 December Case&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1861 July Case&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1861 November Case&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1861 October Case&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1861 September Cases&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1862 April Case&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1862 August Case&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1862 December Case&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1862 February Case&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1862 January Case&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1862 July Case&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1862 June Case&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1862 March Case&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1862 May Case&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1862 November Case&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1862 October Case&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1862 September Case&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1863 April Case&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1863 August Case&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1863 December Case&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1863 February Case&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1863 January Case&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1863 July Case&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1863 June Case&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1863 March Case&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1863 May Case&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1863 November Case&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1863 October Case&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1863 September Case&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1864 April Case&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1864 August Case&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1864 December Case&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1864 February Case&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1864 January Case&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1864 July Case&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1864 June Case&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1864 March Case&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1864 May Case&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1864 November Case&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1864 October Case&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1864 September Case&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1865 April Case&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1865 February case&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1865 January Case&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1865 March Case&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;FY1862 Total Cases&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;FY1863 Total Cases&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;FY1864 Total Cases&quot;' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0htu0bv1fgj03y1h899z019l0bbb].[none:Key:nk]' filter-group='3'>
+            <groupfilter function='member' level='[none:Key:nk]' member='&quot;November, 1864&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0htu0bv1fgj03y1h899z019l0bbb].[none:Deaths and Cases:nk]</column>
+            <column>[federated.0htu0bv1fgj03y1h899z019l0bbb].[none:Key:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <encodings>
+              <color column='[federated.0htu0bv1fgj03y1h899z019l0bbb].[none:Affliction:nk]' />
+              <wedge-size column='[federated.0htu0bv1fgj03y1h899z019l0bbb].[sum:Pivot1 Values:qk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+    </worksheet>
+    <worksheet name='Class Hierarchy'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Diseases by Class</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Pivoted Join (2) (Pivoted AOTP Join)' name='federated.0htu0bv1fgj03y1h899z019l0bbb' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0htu0bv1fgj03y1h899z019l0bbb'>
+            <column caption='Disease' datatype='string' name='[Affliction]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Class]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='%null%' value='Unidentified' />
+              </aliases>
+            </column>
+            <column datatype='string' name='[Deaths and Cases]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Event Name]' role='dimension' type='nominal' />
+            <column caption='Month and Year' datatype='string' name='[Key]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Order]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='%null%' value='Unidentified' />
+              </aliases>
+            </column>
+            <column caption='Number' datatype='integer' name='[Pivot1 Values]' role='measure' type='quantitative' />
+            <column-instance column='[Affliction]' derivation='None' name='[none:Affliction:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Class]' derivation='None' name='[none:Class:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Deaths and Cases]' derivation='None' name='[none:Deaths and Cases:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Key]' derivation='None' name='[none:Key:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Order]' derivation='None' name='[none:Order:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Pivot1 Values]' derivation='Sum' name='[sum:Pivot1 Values:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0htu0bv1fgj03y1h899z019l0bbb].[Action (Event Name)]'>
+            <groupfilter function='level-members' level='[Event Name]' user:ui-action-filter='[Action2]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <computed-sort column='[federated.0htu0bv1fgj03y1h899z019l0bbb].[none:Affliction:nk]' direction='DESC' using='[federated.0htu0bv1fgj03y1h899z019l0bbb].[sum:Pivot1 Values:qk]' />
+          <computed-sort column='[federated.0htu0bv1fgj03y1h899z019l0bbb].[none:Class:nk]' direction='DESC' using='[federated.0htu0bv1fgj03y1h899z019l0bbb].[sum:Pivot1 Values:qk]' />
+          <manual-sort column='[federated.0htu0bv1fgj03y1h899z019l0bbb].[none:Deaths and Cases:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;1863 September Case&quot;</bucket>
+              <bucket>&quot;1863 September death&quot;</bucket>
+              <bucket>%all%</bucket>
+            </dictionary>
+          </manual-sort>
+          <filter class='categorical' column='[federated.0htu0bv1fgj03y1h899z019l0bbb].[none:Key:nk]' filter-group='3'>
+            <groupfilter function='member' level='[none:Key:nk]' member='&quot;November, 1864&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <alphabetic-sort column='[federated.0htu0bv1fgj03y1h899z019l0bbb].[none:Order:nk]' direction='DESC' />
+          <slices>
+            <column>[federated.0htu0bv1fgj03y1h899z019l0bbb].[none:Key:nk]</column>
+            <column>[federated.0htu0bv1fgj03y1h899z019l0bbb].[Action (Event Name)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0htu0bv1fgj03y1h899z019l0bbb].[none:Deaths and Cases:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>([federated.0htu0bv1fgj03y1h899z019l0bbb].[none:Class:nk] / [federated.0htu0bv1fgj03y1h899z019l0bbb].[none:Order:nk])</rows>
+        <cols>[federated.0htu0bv1fgj03y1h899z019l0bbb].[sum:Pivot1 Values:qk]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Deaths Class Pie Chart'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Deaths by Class</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Pivoted Join (2) (Pivoted AOTP Join)' name='federated.0htu0bv1fgj03y1h899z019l0bbb' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0htu0bv1fgj03y1h899z019l0bbb'>
+            <column caption='Disease' datatype='string' name='[Affliction]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Class]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='%null%' value='Unidentified' />
+              </aliases>
+            </column>
+            <column datatype='string' name='[Deaths and Cases]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Event Name]' role='dimension' type='nominal' />
+            <column caption='Month and Year' datatype='string' name='[Key]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Order]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='%null%' value='Unidentified' />
+              </aliases>
+            </column>
+            <column caption='Number' datatype='integer' name='[Pivot1 Values]' role='measure' type='quantitative' />
+            <column-instance column='[Affliction]' derivation='None' name='[none:Affliction:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Class]' derivation='None' name='[none:Class:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Deaths and Cases]' derivation='None' name='[none:Deaths and Cases:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Key]' derivation='None' name='[none:Key:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Order]' derivation='None' name='[none:Order:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Pivot1 Values]' derivation='Sum' name='[sum:Pivot1 Values:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0htu0bv1fgj03y1h899z019l0bbb].[Action (Event Name)]'>
+            <groupfilter function='level-members' level='[Event Name]' user:ui-action-filter='[Action2]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0htu0bv1fgj03y1h899z019l0bbb].[none:Deaths and Cases:nk]'>
+            <groupfilter function='level-members' level='[none:Deaths and Cases:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0htu0bv1fgj03y1h899z019l0bbb].[none:Key:nk]' filter-group='3'>
+            <groupfilter function='member' level='[none:Key:nk]' member='&quot;November, 1864&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0htu0bv1fgj03y1h899z019l0bbb].[none:Deaths and Cases:nk]</column>
+            <column>[federated.0htu0bv1fgj03y1h899z019l0bbb].[none:Key:nk]</column>
+            <column>[federated.0htu0bv1fgj03y1h899z019l0bbb].[Action (Event Name)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <encodings>
+              <color column='[federated.0htu0bv1fgj03y1h899z019l0bbb].[none:Class:nk]' />
+              <lod column='[federated.0htu0bv1fgj03y1h899z019l0bbb].[none:Order:nk]' />
+              <lod column='[federated.0htu0bv1fgj03y1h899z019l0bbb].[none:Affliction:nk]' />
+              <wedge-size column='[federated.0htu0bv1fgj03y1h899z019l0bbb].[sum:Pivot1 Values:qk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+    </worksheet>
+    <worksheet name='Deaths Pie Chart'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Deaths&#10;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Pivoted Join (2) (Pivoted AOTP Join)' name='federated.0htu0bv1fgj03y1h899z019l0bbb' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0htu0bv1fgj03y1h899z019l0bbb'>
+            <column caption='Disease' datatype='string' name='[Affliction]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Deaths and Cases]' role='dimension' type='nominal' />
+            <column caption='Month and Year' datatype='string' name='[Key]' role='dimension' type='nominal' />
+            <column caption='Number' datatype='integer' name='[Pivot1 Values]' role='measure' type='quantitative' />
+            <column-instance column='[Affliction]' derivation='None' name='[none:Affliction:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Deaths and Cases]' derivation='None' name='[none:Deaths and Cases:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Key]' derivation='None' name='[none:Key:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Pivot1 Values]' derivation='Sum' name='[sum:Pivot1 Values:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0htu0bv1fgj03y1h899z019l0bbb].[none:Deaths and Cases:nk]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1861 August Death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1861 December death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1861 July Death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1861 November death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1861 October death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1861 September death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1862 April death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1862 August death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1862 December death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1862 February death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1862 January death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1862 July death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1862 June death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1862 March death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1862 May Death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1862 November death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1862 October death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1862 September death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1863 April death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1863 August death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1863 December death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1863 February death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1863 January death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1863 July death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1863 June death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1863 March death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1863 May death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1863 November death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1863 October death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1863 September death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1864 April death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1864 August Death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1864 December death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1864 February death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1864 January death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1864 July death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1864 June death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1864 March death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1864 May death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1864 November death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1864 October death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1864 September Death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1865 April death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1865 February death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1865 January death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1865 March death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;FY1862 Total Deaths&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;FY1863 Total deaths&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;FY1864 Total Deaths&quot;' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0htu0bv1fgj03y1h899z019l0bbb].[none:Key:nk]' filter-group='3'>
+            <groupfilter function='member' level='[none:Key:nk]' member='&quot;November, 1864&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0htu0bv1fgj03y1h899z019l0bbb].[none:Deaths and Cases:nk]</column>
+            <column>[federated.0htu0bv1fgj03y1h899z019l0bbb].[none:Key:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <encodings>
+              <color column='[federated.0htu0bv1fgj03y1h899z019l0bbb].[none:Affliction:nk]' />
+              <wedge-size column='[federated.0htu0bv1fgj03y1h899z019l0bbb].[sum:Pivot1 Values:qk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+    </worksheet>
+    <worksheet name='Diseases'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Pivoted Join (2) (Pivoted AOTP Join)' name='federated.0htu0bv1fgj03y1h899z019l0bbb' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0htu0bv1fgj03y1h899z019l0bbb'>
+            <column caption='Disease' datatype='string' name='[Affliction]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Deaths and Cases]' role='dimension' type='nominal' />
+            <column caption='Month and Year' datatype='string' name='[Key]' role='dimension' type='nominal' />
+            <column caption='Number' datatype='integer' name='[Pivot1 Values]' role='measure' type='quantitative' />
+            <column-instance column='[Affliction]' derivation='None' name='[none:Affliction:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Deaths and Cases]' derivation='None' name='[none:Deaths and Cases:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Key]' derivation='None' name='[none:Key:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Pivot1 Values]' derivation='Sum' name='[sum:Pivot1 Values:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <computed-sort column='[federated.0htu0bv1fgj03y1h899z019l0bbb].[none:Affliction:nk]' direction='DESC' using='[federated.0htu0bv1fgj03y1h899z019l0bbb].[sum:Pivot1 Values:qk]' />
+          <filter class='categorical' column='[federated.0htu0bv1fgj03y1h899z019l0bbb].[none:Key:nk]' filter-group='3'>
+            <groupfilter function='member' level='[none:Key:nk]' member='&quot;November, 1864&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0htu0bv1fgj03y1h899z019l0bbb].[none:Key:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0htu0bv1fgj03y1h899z019l0bbb].[none:Deaths and Cases:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0htu0bv1fgj03y1h899z019l0bbb].[none:Affliction:nk]</rows>
+        <cols>[federated.0htu0bv1fgj03y1h899z019l0bbb].[sum:Pivot1 Values:qk]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Map'>
+      <layout-options>
+        <title>
+          <formatted-text />
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Pivoted Join (2) (Pivoted AOTP Join)' name='federated.0htu0bv1fgj03y1h899z019l0bbb' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.0htu0bv1fgj03y1h899z019l0bbb'>
+            <column datatype='integer' name='[Battle Order]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Event Name]' role='dimension' type='nominal' />
+            <column caption='Month and Year' datatype='string' name='[Key]' role='dimension' type='nominal' />
+            <column aggregation='Avg' datatype='real' name='[Latitude]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+            <column datatype='string' name='[Location]' role='dimension' type='nominal' />
+            <column aggregation='Avg' datatype='real' name='[Longitude]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+            <column-instance column='[Location]' derivation='Attribute' name='[attr:Location:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Latitude]' derivation='Avg' name='[avg:Latitude:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Longitude]' derivation='Avg' name='[avg:Longitude:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Event Name]' derivation='None' name='[none:Event Name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Key]' derivation='None' name='[none:Key:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Battle Order]' derivation='Sum' name='[sum:Battle Order:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.0htu0bv1fgj03y1h899z019l0bbb].[avg:Longitude:qk]' included-values='non-null' />
+          <filter class='categorical' column='[federated.0htu0bv1fgj03y1h899z019l0bbb].[none:Key:nk]' filter-group='3'>
+            <groupfilter function='member' level='[none:Key:nk]' member='&quot;November, 1864&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0htu0bv1fgj03y1h899z019l0bbb].[avg:Longitude:qk]</column>
+            <column>[federated.0htu0bv1fgj03y1h899z019l0bbb].[none:Key:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0htu0bv1fgj03y1h899z019l0bbb].[avg:Longitude:qk]' field-type='quantitative' max='-7548877.8161358824' min='-9501488.8379390109' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.0htu0bv1fgj03y1h899z019l0bbb].[avg:Latitude:qk]' field-type='quantitative' max='5135700.6338867107' min='4298867.3388282275' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='map-layer'>
+            <format attr='enabled' id='tab_base' value='true' />
+            <format attr='enabled' id='um_lcover' value='true' />
+            <format attr='enabled' id='tab_coastline' value='false' />
+            <format attr='enabled' id='pp2_line' value='false' />
+            <format attr='enabled' id='light_adm0_bnd' value='false' />
+            <format attr='enabled' id='light_adm0_lbl' value='false' />
+            <format attr='enabled' id='um_adm0_bnd' value='true' />
+            <format attr='enabled' id='um_adm0_lbl' value='true' />
+            <format attr='enabled' id='light_pp2_statebounds' value='false' />
+            <format attr='enabled' id='light_pp2_statelabels' value='false' />
+            <format attr='enabled' id='pp2_adminlabels' value='false' />
+            <format attr='enabled' id='pp2_statebounds' value='true' />
+            <format attr='enabled' id='pp2_statelabels' value='true' />
+            <format attr='enabled' id='countybounds' value='false' />
+            <format attr='enabled' id='countylabels' value='false' />
+            <format attr='enabled' id='zipbounds' value='false' />
+            <format attr='enabled' id='ziplabels' value='false' />
+            <format attr='enabled' id='tab_areabounds' value='false' />
+            <format attr='enabled' id='tab_arealabels' value='false' />
+            <format attr='enabled' id='tab_msabounds' value='false' />
+            <format attr='enabled' id='tab_msalabels' value='false' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <encodings>
+              <lod column='[federated.0htu0bv1fgj03y1h899z019l0bbb].[none:Event Name:nk]' />
+              <path column='[federated.0htu0bv1fgj03y1h899z019l0bbb].[sum:Battle Order:qk]' />
+              <tooltip column='[federated.0htu0bv1fgj03y1h899z019l0bbb].[attr:Location:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0htu0bv1fgj03y1h899z019l0bbb].[avg:Latitude:qk]</rows>
+        <cols>[federated.0htu0bv1fgj03y1h899z019l0bbb].[avg:Longitude:qk]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Top Afflictions'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Top Diseases&#10;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Pivoted Join (2) (Pivoted AOTP Join)' name='federated.0htu0bv1fgj03y1h899z019l0bbb' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Top Diseases' datatype='integer' name='[Parameter 1]' param-domain-type='range' role='measure' type='quantitative' value='30'>
+              <calculation class='tableau' formula='30' />
+              <range granularity='5' max='30' min='5' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.0htu0bv1fgj03y1h899z019l0bbb'>
+            <column caption='Disease' datatype='string' name='[Affliction]' role='dimension' type='nominal' />
+            <column caption='Top Diseases vs. Other' datatype='string' name='[Calculation_2034501150461566976]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF  [Top Affliction by Number] THEN [Affliction]&#13;&#10;ELSE &quot;Other&quot;&#13;&#10;End' />
+            </column>
+            <column datatype='string' name='[Deaths and Cases]' role='dimension' type='nominal' />
+            <column caption='Month and Year' datatype='string' name='[Key]' role='dimension' type='nominal' />
+            <column caption='Number' datatype='integer' name='[Pivot1 Values]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_2034501150461566976]' derivation='None' name='[none:Calculation_2034501150461566976:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Deaths and Cases]' derivation='None' name='[none:Deaths and Cases:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Key]' derivation='None' name='[none:Key:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Pivot1 Values]' derivation='Sum' name='[sum:Pivot1 Values:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <computed-sort column='[federated.0htu0bv1fgj03y1h899z019l0bbb].[none:Calculation_2034501150461566976:nk]' direction='DESC' using='[federated.0htu0bv1fgj03y1h899z019l0bbb].[sum:Pivot1 Values:qk]' />
+          <filter class='categorical' column='[federated.0htu0bv1fgj03y1h899z019l0bbb].[none:Key:nk]' filter-group='3'>
+            <groupfilter function='member' level='[none:Key:nk]' member='&quot;November, 1864&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0htu0bv1fgj03y1h899z019l0bbb].[none:Key:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0htu0bv1fgj03y1h899z019l0bbb].[none:Deaths and Cases:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0htu0bv1fgj03y1h899z019l0bbb].[none:Calculation_2034501150461566976:nk]</rows>
+        <cols>[federated.0htu0bv1fgj03y1h899z019l0bbb].[sum:Pivot1 Values:qk]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Top Cases Pie Chart'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Top Cases&#10;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Pivoted Join (2) (Pivoted AOTP Join)' name='federated.0htu0bv1fgj03y1h899z019l0bbb' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Top Diseases' datatype='integer' name='[Parameter 1]' param-domain-type='range' role='measure' type='quantitative' value='30'>
+              <calculation class='tableau' formula='30' />
+              <range granularity='5' max='30' min='5' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.0htu0bv1fgj03y1h899z019l0bbb'>
+            <column caption='Disease' datatype='string' name='[Affliction]' role='dimension' type='nominal' />
+            <column caption='Top Diseases vs. Other' datatype='string' name='[Calculation_2034501150461566976]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF  [Top Affliction by Number] THEN [Affliction]&#13;&#10;ELSE &quot;Other&quot;&#13;&#10;End' />
+            </column>
+            <column datatype='string' name='[Deaths and Cases]' role='dimension' type='nominal' />
+            <column caption='Month and Year' datatype='string' name='[Key]' role='dimension' type='nominal' />
+            <column caption='Number' datatype='integer' name='[Pivot1 Values]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_2034501150461566976]' derivation='None' name='[none:Calculation_2034501150461566976:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Deaths and Cases]' derivation='None' name='[none:Deaths and Cases:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Key]' derivation='None' name='[none:Key:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Pivot1 Values]' derivation='Sum' name='[sum:Pivot1 Values:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0htu0bv1fgj03y1h899z019l0bbb].[none:Deaths and Cases:nk]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1861 August Case&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1861 December Case&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1861 July Case&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1861 November Case&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1861 October Case&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1861 September Cases&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1862 April Case&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1862 August Case&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1862 December Case&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1862 February Case&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1862 January Case&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1862 July Case&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1862 June Case&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1862 March Case&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1862 May Case&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1862 November Case&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1862 October Case&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1862 September Case&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1863 April Case&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1863 August Case&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1863 December Case&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1863 February Case&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1863 January Case&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1863 July Case&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1863 June Case&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1863 March Case&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1863 May Case&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1863 November Case&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1863 October Case&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1863 September Case&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1864 April Case&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1864 August Case&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1864 December Case&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1864 February Case&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1864 January Case&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1864 July Case&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1864 June Case&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1864 March Case&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1864 May Case&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1864 November Case&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1864 October Case&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1864 September Case&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1865 April Case&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1865 February case&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1865 January Case&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1865 March Case&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;FY1862 Total Cases&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;FY1863 Total Cases&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;FY1864 Total Cases&quot;' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0htu0bv1fgj03y1h899z019l0bbb].[none:Key:nk]' filter-group='3'>
+            <groupfilter function='member' level='[none:Key:nk]' member='&quot;November, 1864&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0htu0bv1fgj03y1h899z019l0bbb].[none:Deaths and Cases:nk]</column>
+            <column>[federated.0htu0bv1fgj03y1h899z019l0bbb].[none:Key:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <encodings>
+              <color column='[federated.0htu0bv1fgj03y1h899z019l0bbb].[none:Calculation_2034501150461566976:nk]' />
+              <wedge-size column='[federated.0htu0bv1fgj03y1h899z019l0bbb].[sum:Pivot1 Values:qk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+    </worksheet>
+    <worksheet name='Top Deaths Pie Chart'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Top Deaths&#10;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Pivoted Join (2) (Pivoted AOTP Join)' name='federated.0htu0bv1fgj03y1h899z019l0bbb' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Top Diseases' datatype='integer' name='[Parameter 1]' param-domain-type='range' role='measure' type='quantitative' value='30'>
+              <calculation class='tableau' formula='30' />
+              <range granularity='5' max='30' min='5' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.0htu0bv1fgj03y1h899z019l0bbb'>
+            <column caption='Disease' datatype='string' name='[Affliction]' role='dimension' type='nominal' />
+            <column caption='Top Diseases vs. Other' datatype='string' name='[Calculation_2034501150461566976]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF  [Top Affliction by Number] THEN [Affliction]&#13;&#10;ELSE &quot;Other&quot;&#13;&#10;End' />
+            </column>
+            <column datatype='string' name='[Deaths and Cases]' role='dimension' type='nominal' />
+            <column caption='Month and Year' datatype='string' name='[Key]' role='dimension' type='nominal' />
+            <column caption='Number' datatype='integer' name='[Pivot1 Values]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_2034501150461566976]' derivation='None' name='[none:Calculation_2034501150461566976:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Deaths and Cases]' derivation='None' name='[none:Deaths and Cases:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Key]' derivation='None' name='[none:Key:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Pivot1 Values]' derivation='Sum' name='[sum:Pivot1 Values:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0htu0bv1fgj03y1h899z019l0bbb].[none:Deaths and Cases:nk]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1861 August Death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1861 December death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1861 July Death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1861 November death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1861 October death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1861 September death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1862 April death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1862 August death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1862 December death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1862 February death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1862 January death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1862 July death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1862 June death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1862 March death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1862 May Death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1862 November death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1862 October death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1862 September death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1863 April death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1863 August death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1863 December death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1863 February death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1863 January death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1863 July death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1863 June death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1863 March death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1863 May death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1863 November death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1863 October death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1863 September death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1864 April death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1864 August Death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1864 December death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1864 February death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1864 January death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1864 July death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1864 June death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1864 March death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1864 May death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1864 November death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1864 October death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1864 September Death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1865 April death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1865 February death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1865 January death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;1865 March death&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;FY1862 Total Deaths&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;FY1863 Total deaths&quot;' />
+              <groupfilter function='member' level='[none:Deaths and Cases:nk]' member='&quot;FY1864 Total Deaths&quot;' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0htu0bv1fgj03y1h899z019l0bbb].[none:Key:nk]' filter-group='3'>
+            <groupfilter function='member' level='[none:Key:nk]' member='&quot;November, 1864&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0htu0bv1fgj03y1h899z019l0bbb].[none:Deaths and Cases:nk]</column>
+            <column>[federated.0htu0bv1fgj03y1h899z019l0bbb].[none:Key:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <encodings>
+              <color column='[federated.0htu0bv1fgj03y1h899z019l0bbb].[none:Calculation_2034501150461566976:nk]' />
+              <wedge-size column='[federated.0htu0bv1fgj03y1h899z019l0bbb].[sum:Pivot1 Values:qk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='Class Dashboard'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Diseases by Class of the Army of the Potomac&#10;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' preset-index='1' sizing-mode='fixed' />
+      <datasources>
+        <datasource caption='Pivoted Join (2) (Pivoted AOTP Join)' name='federated.0htu0bv1fgj03y1h899z019l0bbb' />
+      </datasources>
+      <datasource-dependencies datasource='federated.0htu0bv1fgj03y1h899z019l0bbb'>
+        <column caption='Month and Year' datatype='string' name='[Key]' role='dimension' type='nominal' />
+        <column-instance column='[Key]' derivation='None' name='[none:Key:nk]' pivot='key' type='nominal' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='2' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98000' id='15' param='vert' type='layout-flow' w='98400' x='800' y='1000'>
+            <zone h='6250' id='16' type='title' w='98400' x='800' y='1000'>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+            <zone h='91750' id='13' param='vert' type='layout-flow' w='98400' x='800' y='7250'>
+              <zone fixed-size='68' h='9500' id='6' is-fixed='true' mode='slider' name='Map' param='[federated.0htu0bv1fgj03y1h899z019l0bbb].[none:Key:nk]' show-all='false' type='filter' w='98400' x='800' y='7250'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='82250' id='5' param='horz' type='layout-flow' w='98400' x='800' y='16750'>
+                <zone h='82250' id='3' type='layout-basic' w='78400' x='800' y='16750'>
+                  <zone h='41114' id='1' name='Map' w='78400' x='800' y='16750'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='41136' id='7' name='Class Hierarchy' w='78400' x='800' y='57864'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                </zone>
+                <zone fixed-size='200' h='82250' id='4' is-fixed='true' param='vert' type='layout-flow' w='20000' x='79200' y='16750'>
+                  <zone h='30937' id='8' name='Cases Class Pie Chart' w='20000' x='79200' y='16750'>
+                    <layout-cache fixed-size-h='245' fixed-size-w='181' type-h='fixed' type-w='fixed' />
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone fixed-size='155' h='20375' id='9' is-fixed='true' name='Cases Class Pie Chart' pane-specification-id='0' param='[federated.0htu0bv1fgj03y1h899z019l0bbb].[none:Class:nk]' type='color' w='20000' x='79200' y='47687'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='30938' id='10' name='Deaths Class Pie Chart' w='20000' x='79200' y='68062'>
+                    <layout-cache fixed-size-h='245' fixed-size-w='181' type-h='fixed' type-w='fixed' />
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                </zone>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='8000' id='11' name='Class Hierarchy' pane-specification-id='0' param='[federated.0htu0bv1fgj03y1h899z019l0bbb].[none:Deaths and Cases:nk]' type='color' w='18400' x='58000' y='58625' />
+      </zones>
+    </dashboard>
+    <dashboard name='Disease Dashboard'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Diseases of the Army of the Potomac</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <datasources>
+        <datasource caption='Pivoted Join (2) (Pivoted AOTP Join)' name='federated.0htu0bv1fgj03y1h899z019l0bbb' />
+      </datasources>
+      <datasource-dependencies datasource='federated.0htu0bv1fgj03y1h899z019l0bbb'>
+        <column caption='Month and Year' datatype='string' name='[Key]' role='dimension' type='nominal' />
+        <column-instance column='[Key]' derivation='None' name='[none:Key:nk]' pivot='key' type='nominal' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='2' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98000' id='12' param='vert' type='layout-flow' w='98400' x='800' y='1000'>
+            <zone h='6250' id='13' type='title' w='98400' x='800' y='1000'>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+            <zone fixed-size='87' h='11875' id='6' is-fixed='true' mode='slider' name='Map' param='[federated.0htu0bv1fgj03y1h899z019l0bbb].[none:Key:nk]' type='filter' w='98400' x='800' y='7250'>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+            <zone h='79875' id='5' param='horz' type='layout-flow' w='98400' x='800' y='19125'>
+              <zone h='79875' id='3' type='layout-basic' w='81100' x='800' y='19125'>
+                <zone h='39936' id='1' name='Map' w='81100' x='800' y='19125'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='39939' id='7' name='Diseases' w='81100' x='800' y='59061'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone fixed-size='173' h='79875' id='4' is-fixed='true' param='vert' type='layout-flow' w='17300' x='81900' y='19125'>
+                <zone fixed-size='290' h='37250' id='9' is-fixed='true' name='Cases Pie Chart' w='17300' x='81900' y='19125'>
+                  <layout-cache fixed-size-w='160' type-h='fixed' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='8000' id='8' name='Diseases' pane-specification-id='0' param='[federated.0htu0bv1fgj03y1h899z019l0bbb].[none:Deaths and Cases:nk]' type='color' w='18400' x='62100' y='58625' />
+        <zone fixed-size='301' h='33250' id='10' is-fixed='true' name='Deaths Pie Chart' w='17300' x='82200' y='57500'>
+          <layout-cache fixed-size-w='160' type-h='fixed' type-w='fixed' />
+        </zone>
+      </zones>
+    </dashboard>
+    <dashboard name='Top Afflictions Dashboard'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Top Diseases of the Army of the Potomac</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <datasources>
+        <datasource caption='Pivoted Join (2) (Pivoted AOTP Join)' name='federated.0htu0bv1fgj03y1h899z019l0bbb' />
+      </datasources>
+      <datasource-dependencies datasource='federated.0htu0bv1fgj03y1h899z019l0bbb'>
+        <column caption='Month and Year' datatype='string' name='[Key]' role='dimension' type='nominal' />
+        <column-instance column='[Key]' derivation='None' name='[none:Key:nk]' pivot='key' type='nominal' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='2' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98000' id='14' param='vert' type='layout-flow' w='98400' x='800' y='1000'>
+            <zone h='6250' id='15' type='title' w='98400' x='800' y='1000'>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+            <zone h='9875' id='6' mode='slider' name='Map' param='[federated.0htu0bv1fgj03y1h899z019l0bbb].[none:Key:nk]' type='filter' w='98400' x='800' y='7250'>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+            <zone h='81875' id='5' param='horz' type='layout-flow' w='98400' x='800' y='17125'>
+              <zone h='81875' id='3' type='layout-basic' w='81200' x='800' y='17125'>
+                <zone h='39266' id='1' name='Map' w='81200' x='800' y='17125'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='42609' id='7' name='Top Afflictions' w='81200' x='800' y='56391'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone fixed-size='172' h='81875' id='4' is-fixed='true' param='vert' type='layout-flow' w='17200' x='82000' y='17125'>
+                <zone h='9875' id='9' mode='slider' param='[Parameters].[Parameter 1]' type='paramctrl' w='17200' x='82000' y='17125'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='27250' id='10' name='Top Cases Pie Chart' w='17200' x='82000' y='27000'>
+                  <layout-cache fixed-size-h='210' fixed-size-w='160' type-h='fixed' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='27250' id='12' name='Top Deaths Pie Chart' w='17200' x='82000' y='54250'>
+                  <layout-cache fixed-size-h='210' fixed-size-w='160' type-h='fixed' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='8000' id='8' name='Top Afflictions' pane-specification-id='0' param='[federated.0htu0bv1fgj03y1h899z019l0bbb].[none:Deaths and Cases:nk]' type='color' w='18400' x='62300' y='56625' />
+      </zones>
+    </dashboard>
+  </dashboards>
+  <windows source-height='37'>
+    <window class='dashboard' name='Disease Dashboard'>
+      <viewpoints>
+        <viewpoint name='Cases Pie Chart' />
+        <viewpoint name='Deaths Pie Chart' />
+        <viewpoint name='Diseases' />
+        <viewpoint name='Map'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+    </window>
+    <window class='dashboard' maximized='true' name='Class Dashboard'>
+      <viewpoints>
+        <viewpoint name='Cases Class Pie Chart' />
+        <viewpoint name='Class Hierarchy' />
+        <viewpoint name='Deaths Class Pie Chart' />
+        <viewpoint name='Map'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='7' />
+    </window>
+    <window class='dashboard' name='Top Afflictions Dashboard'>
+      <viewpoints>
+        <viewpoint name='Map'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Top Afflictions' />
+        <viewpoint name='Top Cases Pie Chart' />
+        <viewpoint name='Top Deaths Pie Chart' />
+      </viewpoints>
+      <active id='6' />
+    </window>
+    <window class='worksheet' name='Diseases'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0htu0bv1fgj03y1h899z019l0bbb].[none:Deaths and Cases:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+    <window class='worksheet' name='Map'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='slider' param='[federated.0htu0bv1fgj03y1h899z019l0bbb].[none:Key:nk]' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+    <window class='worksheet' name='Cases Pie Chart'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0htu0bv1fgj03y1h899z019l0bbb].[none:Affliction:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+    <window class='worksheet' name='Deaths Pie Chart'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0htu0bv1fgj03y1h899z019l0bbb].[none:Affliction:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+    <window class='worksheet' name='Class Hierarchy'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0htu0bv1fgj03y1h899z019l0bbb].[none:Deaths and Cases:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+    <window class='worksheet' name='Cases Class Pie Chart'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0htu0bv1fgj03y1h899z019l0bbb].[none:Class:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+    <window class='worksheet' name='Deaths Class Pie Chart'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0htu0bv1fgj03y1h899z019l0bbb].[none:Class:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+    <window class='worksheet' name='Top Afflictions'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0htu0bv1fgj03y1h899z019l0bbb].[none:Deaths and Cases:nk]' type='color' />
+            <card mode='type_in' param='[Parameters].[Parameter 1]' type='parameter' />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+    <window class='worksheet' name='Top Cases Pie Chart'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0htu0bv1fgj03y1h899z019l0bbb].[none:Calculation_2034501150461566976:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+    <window class='worksheet' name='Top Deaths Pie Chart'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0htu0bv1fgj03y1h899z019l0bbb].[none:Calculation_2034501150461566976:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+  </windows>
+</workbook>
